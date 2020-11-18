@@ -73,7 +73,7 @@ func TestProvider_configure(t *testing.T) {
 	resetEnv := unsetEnv(t)
 	defer resetEnv()
 
-	os.Setenv("KUBE_CONFIG_PATHS", "test-fixtures/kube-config.yaml")
+	os.Setenv("KUBE_CONFIG_PATH", "test-fixtures/kube-config.yaml")
 	os.Setenv("KUBE_CTX", "gcp")
 
 	rc := terraform.NewResourceConfigRaw(map[string]interface{}{})
